@@ -88,7 +88,7 @@ dFz12=zeros(length(t),1);
 dFz21=zeros(length(t),1);
 dFz22=zeros(length(t),1);
 
-
+%Simulation
 for i=1:length(t)-1
     
     %Get lateral forces
@@ -125,7 +125,7 @@ for i=1:length(t)-1
     Vwx21(i+1)=Vx(i)-(psi(i)*tr/2);
     Vwx22(i+1)=Vx(i)-(psi(i)*tr/2);
     
-    %slip angles **maybe i+1** **negative sign per Dr. Estes**
+    %slip angles 
     alpha11(i+1)=-(delta(i)-atan((Vy(i)+lf*psi(i))/(Vx(i)-tf*psi(i)/2)));
     alpha12(i+1)=-(delta(i)-atan((Vy(i)+lf*psi(i))/(Vx(i)+tf*psi(i)/2)));
     alpha21(i+1)=-(-atan((Vy(i)-lr*psi(i))/(Vx(i)-tr*psi(i)/2)));
