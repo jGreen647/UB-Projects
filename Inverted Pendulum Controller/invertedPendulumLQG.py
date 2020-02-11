@@ -33,11 +33,11 @@ Cd = sys_Dis.C
 
 # Controlability test
 Controlable = ct.ctrb(Ad, Bd)     
-# print(np.linalg.det(Controlable))     # full rank - therefore controllable
+# print(np.linalg.matrix_rank(Controlable))     # full rank - therefore controllable
 
 # Observability Test:
 Observable = ct.obsv(Ad,Cd)   
-# print(np.linalg.det(Observable))    # full rank - therefore observable
+# print(np.linalg.matrix_rank(Observable))    # full rank - therefore observable
 
 
 
